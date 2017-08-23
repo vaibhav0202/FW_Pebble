@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_Pebble
+ * @copyright   Copyright (c) 2015 F+W Media, Inc. (http://www.fwcommunity.com)
+ */
+
+-->
+<config>
+    <modules>
+        <FW_Pebble>
+            <version>1.0.0</version>
+        </FW_Pebble>
+    </modules>
+    <global>
+        <models>
+            <fw_pebble>
+                <class>FW_Pebble_Model</class>
+            </fw_pebble>
+        </models>
+        <blocks>
+            <fw_pebble>
+                <class>FW_Pebble_Block</class>
+            </fw_pebble>
+        </blocks>
+        <helpers>
+            <fw_pebble>
+                <class>FW_Pebble_Helper</class>
+            </fw_pebble>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <fw_mercent>
+                <use>standard</use>
+                <args>
+                    <module>FW_Pebble</module>
+                    <frontName>pebble</frontName>
+                </args>
+            </fw_mercent>
+        </routers>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <fw_pebble_controller_action_layout_generate_blocks_after>
+                        <class>fw_pebble/observer</class>
+                        <method>onControllerActionBlocksAfter</method>
+                    </fw_pebble_controller_action_layout_generate_blocks_after>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+
+    <default>
+        <thirdparty>
+            <pebble>
+
+            </pebble>
+        </thirdparty>
+    </default>
+</config>

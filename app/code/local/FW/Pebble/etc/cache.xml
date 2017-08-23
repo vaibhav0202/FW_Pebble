@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <placeholders>
+        <fw_pebble>
+            <block>fw_pebble/tracking</block>
+            <placeholder>PEBBLE_TRACKING</placeholder>
+            <container>FW_Pebble_Model_Container_Cachetest</container>
+        </fw_pebble>
+    </placeholders>
+</config>
